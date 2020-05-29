@@ -3,14 +3,37 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { ServiceComponent } from './components/service/service.component';
+import { AboutComponent } from './components/about/about.component';
+import { TeamComponent } from './components/team/team.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CountryCardComponent } from './components/country-card/country-card.component';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { CountriesDataComponent } from './components/countries-data/countries-data.component';
+import { CountriesGlobalDataComponent } from './components/countries-global-data/countries-global-data.component';
+import { CountriesDetailsComponent } from './components/countries-details/countries-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    ServiceComponent,
+    AboutComponent,
+    TeamComponent,
+    CountryCardComponent,
+    CountriesDataComponent,
+    CountriesGlobalDataComponent,
+    CountriesDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

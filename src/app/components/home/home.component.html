@@ -1,0 +1,54 @@
+<div class="jumbotron text-center" style="background: #CAD3C8;">
+<!-- Jumbtron/CasesNumber-->
+<div class="jumbotron text-center" style="background:#ecf0f1; border-radius: 20px;">
+    <h1 class="display-3">Coronaviruse <span style="color: #ea8685;">Cases </span>in <i class="fas fa-globe-africa"></i></h1>
+    <hr class="my-2">
+    <app-country-card [totalConfirmed]= 'totalConfirmed' [totalDeaths]= 'totalDeaths' [totalRecovered]='totalRecovered' [totalActive]= 'totalActive'>
+    </app-country-card>
+  <!--Pie and Column-->
+  <button type="button" class="btn btn-outline-primary btn-lg" data-target="#graphs" data-toggle="collapse">Graphics Cases</button>
+  <div class="collapse" id="graphs">
+    <div class="container-fluid padding">
+        <div class="col-12 text-center">
+            <div class="ui form">
+                <div class="inline fields text-center">
+                  <label for="fruit">Select Case Type:</label>
+                  <div class="field" style="border-radius: 20px;">
+                    <div class="ui radio checkbox">
+                      <input type="radio" id="cnf"  value="cnf" #cnf (click)= 'updateChart(cnf)' name="casetype" checked="" tabindex="0" class="hidden">
+                      <label for='cnf'>Confirmed</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" id="death"  value="death" #death (click)= 'updateChart(death)' name="casetype" tabindex="0" class="hidden">
+                      <label for='death'>Deaths</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" id="rec"  value="rec" #rec (click)= 'updateChart(rec)' name="casetype" tabindex="0" class="hidden">
+                      <label for='rec'>Recovered</label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui radio checkbox">
+                      <input type="radio" id="act"  value="act" #act (click)= 'updateChart(act)' name="casetype" tabindex="0" class="hidden">
+                      <label for='act'>Actives</label>
+                    </div>
+                  </div>
+                </div>   
+              </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-6 mx-auto">
+              <google-chart [type]='chart.PieChart' [options]= 'chart.options' [height]= 'chart.height' [width]= 'chart.width' [data]= 'datatable'></google-chart>
+            </div>
+            <div class="col-sm-6 mx-auto float-right">
+              <google-chart [type]='chart.ColumnChart' [options]= 'chart.options' [height]= 'chart.height' [width]= 'chart.width' [data]= 'datatable'></google-chart>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
