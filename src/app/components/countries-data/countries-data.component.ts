@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataCountries } from '../../models/data-countries';
-import { DataServiceService } from '../../services/data-service.service';
-import { GlobalDataSummary } from '../../models/global-data';
+import { OnInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-countries-data',
@@ -9,13 +6,11 @@ import { GlobalDataSummary } from '../../models/global-data';
   styleUrls: ['./countries-data.component.css']
 })
 export class CountriesDataComponent implements OnInit {
-  
-  
-  constructor() { }
-
+ 
+  constructor() {}
   ngOnInit(): void {
+    
   }
 
   
-
 }

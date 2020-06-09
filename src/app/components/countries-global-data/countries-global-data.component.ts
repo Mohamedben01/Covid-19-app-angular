@@ -22,7 +22,8 @@ export class CountriesGlobalDataComponent implements OnInit {
   
   chart = {
     LineChart : "LineChart",
-    height: 400,
+    height: 250,
+    width: 350,
     options: {
       animation:{
         duration: 1000,
@@ -57,11 +58,7 @@ export class CountriesGlobalDataComponent implements OnInit {
       this.dataTable =[];
       this.selectedCountryData.forEach(cs=>{
         this.dataTable.push([cs.date , cs.cases])
-      })
-
-    
-        
-      
+      })   
     }
 
     updateValues(country: string){

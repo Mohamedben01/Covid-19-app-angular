@@ -8,7 +8,9 @@ import { GlobalDataSummary } from 'src/app/models/global-data';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  //images
+
+
+
   
 
   //Variables
@@ -116,7 +118,7 @@ export class HomeComponent implements OnInit {
   }
 
   updateChart(input : HTMLInputElement){
-    console.log(input.value);
+    //console.log(input.value);
     this.initChart(input.value);
   }
 

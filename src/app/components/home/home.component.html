@@ -1,12 +1,13 @@
-<div class="jumbotron text-center" style="background: #CAD3C8;">
+<div class="jumbotron text-center" style="background: #212327;">
 <!-- Jumbtron/CasesNumber-->
-<div class="jumbotron text-center" style="background:#ecf0f1; border-radius: 20px;">
+<div class="jumbotron text-center" style="background:#aaa; border-radius: 20px;">
     <h1 class="display-3">Coronaviruse <span style="color: #ea8685;">Cases </span>in <i class="fas fa-globe-africa"></i></h1>
     <hr class="my-2">
     <app-country-card [totalConfirmed]= 'totalConfirmed' [totalDeaths]= 'totalDeaths' [totalRecovered]='totalRecovered' [totalActive]= 'totalActive'>
     </app-country-card>
   <!--Pie and Column-->
   <button type="button" class="btn btn-outline-primary btn-lg" data-target="#graphs" data-toggle="collapse">Graphics Cases</button>
+  
   <div class="collapse" id="graphs">
     <div class="container-fluid padding">
         <div class="col-12 text-center">

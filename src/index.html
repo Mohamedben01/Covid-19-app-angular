@@ -18,54 +18,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <app-root></app-root>
-
-  <script>
-    $(function () {
-      $("#cr").on('click',()=>{
-        $("#one").animate({
-        opacity: "0.5"
-      }, 2000);
-      $("#cr").animate({
-        opacity: "1"
-      }, 2000);
-      });
-    });
-
-    $(document).ready(function(){
-      $("#panel").slideUp();
-      $("#moreInfo").on('click',()=>{
-        $("#panel").slideToggle("slow");
-      });
-    });
-  </script> 
-
-
-  <script text="text/javascript">
-   $.ajax({
-    url: "https://api.covid19api.com/summary",
-    type: "GET",
-    dataType: "JSON",
-    success: function(data){
-      var sno = 1 ;
-      $.each(data.Countries, function(key, value){
-        $("#global-wise").append("<tr>"+
-          "<td>" + sno + "</td>"+
-          "<td>" + value.Country + "</td>"+
-          "<td>" + value.NewConfirmed + "</td>"+
-          "<td>" + value.NewDeaths + "</td>"+
-          "<td>" + value.NewRecovered + "</td>"+
-          "<td>" + value.TotalConfirmed + "</td>"+
-          "<td>" + value.TotalDeaths + "</td>"+
-          "<td>" + value.NewRecovered + "</td>"+
-          "</tr>");
-          sno++;
-      });
-      
-    }
-  });
-  </script>
+  
+  
+  
 </body>
 </html>

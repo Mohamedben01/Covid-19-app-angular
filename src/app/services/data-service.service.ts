@@ -16,6 +16,7 @@ export class DataServiceService {
 
   private dataUrlCountries = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv';
 
+  
 
   month;
   date;
@@ -40,11 +41,9 @@ export class DataServiceService {
       this.year = newDate.getFullYear();
 
       this.golobalDataUrl = this.baseUrl+this.getDate(this.month)+'-'+this.getDate(this.date)+'-'+this.year+this.extention;
-      console.log(this.golobalDataUrl);
+      //console.log(this.golobalDataUrl);
     
   }
-
-  
 
   
 
@@ -90,7 +89,7 @@ export class DataServiceService {
         if(error.status == 404){
           this.date = this.date-1 
           this.golobalDataUrl = this.baseUrl+this.getDate(this.month)+'-'+this.getDate(this.date)+'-'+this.year+this.extention;
-          console.log(this.golobalDataUrl); 
+          //console.log(this.golobalDataUrl); 
           return this.getGlobalData()
         }
       })

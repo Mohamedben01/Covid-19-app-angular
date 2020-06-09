@@ -7,15 +7,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServiceComponent } from './components/service/service.component';
 import { AboutComponent } from './components/about/about.component';
-import { TeamComponent } from './components/team/team.component';
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { CountryCardComponent } from './components/country-card/country-card.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { CountriesDataComponent } from './components/countries-data/countries-data.component';
 import { CountriesGlobalDataComponent } from './components/countries-global-data/countries-global-data.component';
-import { CountriesDetailsComponent } from './components/countries-details/countries-details.component';
+import { AgmCoreModule } from '@agm/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,17 +24,17 @@ import { CountriesDetailsComponent } from './components/countries-details/countr
     HomeComponent,
     ServiceComponent,
     AboutComponent,
-    TeamComponent,
     CountryCardComponent,
-    CountriesDataComponent,
     CountriesGlobalDataComponent,
-    CountriesDetailsComponent
+    CountriesDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    BrowserAnimationsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+
+declare const testOne: any;
+declare const showCards: any;
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -8,14 +12,38 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   //images
-  virusimg1: String = 'assets/img/virus.png';
-  virusimg2: String = 'assets/img/pillsvirus.png';
-  croix: String = 'assets/img/croix1.png';
-  covid1: String = 'assets/img/covid1.jpg';
+  slide1: String = 'assets/img/slide1.jpg';
+  slide2: String = 'assets/img/slide2.jpg';
+  slide3: String = 'assets/img/slide3.jpg';
+  slide4: String = 'assets/img/slide4.jpg';
 
+  //colum section
+  corona1: String = 'assets/img/corona1.png';
+  corona2: String = 'assets/img/corona2.jpg';
+
+
+  //img of the 6 things
+  covid: String = 'assets/img/bck0.jpg';
+  covid1: String = 'assets/img/bck1.jpg';
+  covid11: String = 'assets/img/bck2.jpg';
+  covid111: String = 'assets/img/bck3.jpg';
+  covid1111: String = 'assets/img/bck4.jpg';
+  covid11111: String = 'assets/img/bck5.jpg';
+  covid2: String = 'assets/img/covid2.jpg';
+  covid3: String = 'assets/img/covid3.jpg';
+
+  //img in footer tag
+  logo: String = 'assets/img/logo1.png';
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  methodOne(){
+    testOne();
+    
+  }
+  onClick(){
+    showCards();
+  }
 }
